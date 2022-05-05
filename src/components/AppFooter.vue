@@ -6,14 +6,10 @@
             </a>
 
             <div class="footer-links">
-                <h4>Pastificio</h4>
+                <h4 class="alert alert-danger">Pastificio</h4>
                 <nav>
                     <ul>
-                        <li><a href="#">Il Pastificio</a></li>
-                        <li><a href="#">Grano</a></li>
-                        <li><a href="#">Filiera</a></li>
-                        <li><a href="#">100 anni di pasta</a></li>
-                        <li><a href="#">Sartoria della pasta</a></li>
+                        <li v-for="(item,index) in pasta.pastificio " :key="index"><a :href="item.url">{{item.text}}</a></li>
                     </ul>
                 </nav>
             </div>
@@ -22,7 +18,7 @@
                 <h4>Prodotti</h4>
                 <nav>
                     <ul>
-                        <li v-for="(item,index) in pasta " :key="index"><a :href="item.url">{{item.text}}</a></li>
+                        <li v-for="(item,index) in pasta.prodotti " :key="index"><a :href="item.url">{{item.text}}</a></li>
                         
                     </ul>
                 </nav>

@@ -2,9 +2,10 @@
   <div id="app">
     <app-header />
     <main>
+      <!-- <button @click="cancella()">Cancella</button> -->
       <app-products />
     </main>
-    <app-footer :pasta = "pastificio" />
+    <app-footer :pasta = "datiFooter" />
   </div>
  
 </template>
@@ -22,30 +23,8 @@ export default {
   },
   data(){ 
     return {
-      links: [
-                {
-                    text: "Home",
-                    url: "#",
-                    active: false,
-                },
-                {
-                    text: "Prodotti",
-                    url: "#",
-                    active: true,
-                },
-                {
-                    text: "Chi Siamo",
-                    url: "#",
-                    active: false,
-                },
-                {
-                    text: "Contatti",
-                    url: "#",
-                    active: false,
-                },
-            ],
-
-      pastificio:[
+      datiFooter:{
+        pastificio:[
                {
                     text: "il pastificio",
                     url: "#",
@@ -72,12 +51,64 @@ export default {
                     active: false,
                 },
         
+      ],
+      prodotti:[
+                {
+                    text: "le classiche",
+                    url: "#",
+                    active: false,
+                },
+                {
+                    text: "le classiche",
+                    url: "#",
+                    active: false,
+                },
+                {
+                    text: "le classiche",
+                    url: "#",
+                    active: false,
+                },
+                {
+                    text: "le classiche",
+                    url: "#",
+                    active: false,
+                },
+
+        
       ]
+
+      },
+      // links: [
+      //           {
+      //               text: "Home",
+      //               url: "#",
+      //               active: false,
+      //           },
+      //           {
+      //               text: "Prodotti",
+      //               url: "#",
+      //               active: true,
+      //           },
+      //           {
+      //               text: "Chi Siamo",
+      //               url: "#",
+      //               active: false,
+      //           },
+      //           {
+      //               text: "Contatti",
+      //               url: "#",
+      //               active: false,
+      //           },
+      //       ],
+
      
     
     }
   },
   methods:{
+    cancella(){
+      delete this.datiFooter.pastificio[0].text
+    }
   }
 }
 </script>

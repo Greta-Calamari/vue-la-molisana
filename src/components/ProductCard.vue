@@ -11,6 +11,28 @@ export default {
     name: 'ProductCard',
     data(){
         return {
+            links: [
+                {
+                    text: "Home",
+                    url: "#",
+                    active: false,
+                },
+                {
+                    text: "Prodotti",
+                    url: "#",
+                    active: true,
+                },
+                {
+                    text: "Chi Siamo",
+                    url: "#",
+                    active: false,
+                },
+                {
+                    text: "Contatti",
+                    url: "#",
+                    active: false,
+                },
+            ],
         }
     },
     props: {
